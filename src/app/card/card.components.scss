@@ -1,0 +1,47 @@
+.card {
+  display: inline-block;
+  width: 26%;
+  margin-right: 3%;
+  padding: 1rem;
+  border: 1px solid #666;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 14px;
+
+    &.underline {
+      text-decoration: underline;
+    }
+
+    &.dashed {
+      text-decoration: underline dashed;
+    }
+
+    &.dotted {
+      text-decoration: underline dotted;
+    }
+  }
+
+  .img {
+    margin-bottom: 0.5rem;
+    width: 300px;
+    height: 200px;
+    object-position: left;
+    object-fit: contain;
+  }
+
+  button {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  //input {
+  //  display: block;
+  //}
+}

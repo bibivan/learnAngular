@@ -1,0 +1,41 @@
+<div class="card">
+  <h2 [ngStyle]="{
+    color: card.title.length < 5 ? 'red' : 'green',
+    fontSize: card.title.length < 7 ? '24px' : '18px'
+  }"
+  >{{ card.title }}</h2>
+  <p [ngClass]="{
+    underline: textUnderline === 'underline',
+    dashed: textUnderline === 'dashed',
+    dotted: textUnderline === 'dotted'
+  }">
+    {{ card.text }}
+  </p>
+  <div>
+    <button (click)="changeTitle()">
+      change title
+    </button>
+
+    <button (click)="card.title = 'changed in template'">
+      change title
+    </button>
+<!--    <input type="text" #myInput (input)="inputHandler(myInput.value)" [value]="title">-->
+  </div>
+
+  <div class="">
+    <button (click)="textUnderline = 'underline'">
+      Set Underline
+    </button>
+
+    <button (click)="textUnderline = 'dashed'">
+      Set Dashed
+    </button>
+
+    <button (click)="textUnderline = 'dotted'">
+      Set dotted
+    </button>
+  </div>
+  <div>
+    <input type="text" [(ngModel)]="card.title" (ngModelChange)="changeHandler()">
+  </div>
+</div>
